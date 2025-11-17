@@ -1,0 +1,9 @@
+.disponible {
+  color: green;
+  font-weight: bold;
+}
+
+.indisponible {
+  color: red;
+  font-style: italic;
+}
