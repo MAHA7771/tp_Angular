@@ -1,4 +1,18 @@
-<input type="text" name=prenom [(ngModel)]="utilisateur.prenom">
-<input type="text" name="age" [(ngModel)]="utilisateur.age" >
-{{utilisateur.prenom}}
-{{utilisateur.age}}
+<div class="profile-container">
+  <h2>Profil Utilisateur</h2>
+
+  <div class="form-group">
+    <label for="prenom">Nom :</label>
+    <input type="text" id="prenom" name="prenom" [(ngModel)]="utilisateur.prenom" placeholder="Entrez votre nom">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Âge :</label>
+    <input type="text" id="age" name="age" [(ngModel)]="utilisateur.age" placeholder="Entrez votre âge">
+  </div>
+
+  <div class="display-data">
+    <p>Nom saisi : <span class="dynamic-data">{{ utilisateur.prenom }}</span></p>
+    <p>Âge saisi : <span class="dynamic-data">{{ utilisateur.age }}</span></p>
+  </div>
+</div>
