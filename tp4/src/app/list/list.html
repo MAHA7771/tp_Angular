@@ -1,0 +1,12 @@
+<div class="product-container">
+  <h3>Liste de produit</h3>
+  <div *ngFor="let p of produit" class="product">
+     {{p.nom}}
+    <span [ngStyle]="{'color':
+                     p.stock> 50 ? 'green':
+                     (p.stock>=20 ? 'orange': 'red')}">
+
+      </span>
+    {{p.stock}}
+  </div>
+</div>

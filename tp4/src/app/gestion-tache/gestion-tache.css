@@ -1,0 +1,59 @@
+/* Container général */
+div {
+  font-family: Arial, sans-serif;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+/* Chaque tâche */
+div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+/* Effet hover */
+div > div:hover {
+  background: #f1f1f1;
+}
+
+/* Texte barré pour les tâches complétées */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Bouton */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Message si aucune tâche */
+ng-template p {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.completed {
+  text-decoration: line-through; 
+  color: gray;               
+}

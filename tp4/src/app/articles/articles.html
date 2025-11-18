@@ -1,0 +1,26 @@
+<h2>Liste des articles</h2>
+
+<!-- Formulaire d'ajout -->
+<input type="text" placeholder="Titre" [(ngModel)]="newTitle">
+<br><br>
+<textarea placeholder="Contenu" [(ngModel)]="newContent"></textarea>
+<br><br>
+<select [(ngModel)]="newImportance">
+  <option value="élevée">Élevée</option>
+  <option value="moyenne">Moyenne</option>
+  <option value="faible">Faible</option>
+</select>
+<br><br>
+<button class="btn" (click)="addArticle()">Ajouter l'article</button>
+
+<hr>
+
+<!-- Affichage des articles -->
+<div *ngFor="let b of articles" class="card" [ngClass]="{
+    'important': b.importance === 'élevée',
+    'normal': b.importance === 'moyenne',
+    'faible': b.importance === 'faible'
+}">
+  <h3>{{ b.titre }}</h3>
+  <p>{{ b.contenu }}</p>
+</div>

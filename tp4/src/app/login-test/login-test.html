@@ -1,0 +1,11 @@
+ 
+  <div class="login-container">
+<input type="text" placeholder="Entrez votre prénom" [(ngModel)]="inputName">
+ <!-- Bouton connexion -->
+  <button class="btn" (click)="login()">Se connecter</button>
+
+  <!-- Message + bouton seulement si connecté -->
+  <p *ngIf="isLoggedIn" class="welcome">Bienvenue, {{ myName }} !</p>
+  <button *ngIf="isLoggedIn" (click)="afficher()" class="btn-secondary" >Afficher</button>
+
+</div>

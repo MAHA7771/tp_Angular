@@ -1,0 +1,16 @@
+<div *ngIf="taches.length > 0; else pasDeTaches">
+  <div *ngFor="let t of taches" 
+       [ngClass]="{'completed': t.completee}">
+    {{t.description}} - {{t.priorite}}
+    
+    <!-- Bouton pour basculer le statut -->
+    <button (click)="toggleStatut(t)">
+      {{ t.completee ? 'Complétée' : 'Non complétée' }}
+    </button>
+  </div>
+</div>
+
+<!-- Message si aucune tâche -->
+<ng-template #pasDeTaches>
+  <p>"Vous n'avez pas de tâches en cours".</p>
+</ng-template>
